@@ -1,0 +1,344 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: Inconsolata;
+    src: url(./Inconsolata.ttf);
+}
+@font-face {
+    font-family: NotoaSansJP;
+    src: url(./NotoSansJP.otf);
+}
+
+
+:root{
+    --shadow: rgba(0, 0, 0, 0.50);
+}
+
+
+
+
+html, body{
+    padding: 0px;
+    margin: none;
+    background-color: #f8f2ee;
+    color: #22223B;
+    scroll-behavior: smooth;
+    font-family: NotoSansJP;
+    font-weight: 300;
+    /* font-family: default; */
+    scroll-padding: 140px;
+}
+a{
+    color: #5f68a1;
+}
+
+
+
+header{
+    z-index: 3;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    height: 130px;
+    width: 100vw;
+    background-color: #e2d1c7;
+    box-shadow: -1px 0px 15px var(--shadow);
+}
+header h1{
+    position: relative;
+    bottom: 10px;
+    text-align: center;
+}
+.blog-logo{
+    height: 64px;
+}
+
+
+main{
+    margin-top: 130px;
+    font-size: 18px;
+    width: 50vw;
+    right: 64px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: calc(100vh - 140px);
+    /* min-height: 100vh; */
+}
+
+
+footer{
+    background-color: #343a40;
+    min-height: 100px;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    text-align: center;
+    padding-top: 75px;
+    padding-bottom: 50px;
+}
+footer *{
+    color: white;
+}
+
+
+
+@keyframes blur-back {
+    0%{
+        filter: blur(0px);
+    }
+    100%{
+        filter: blur(5px);
+    }
+}
+
+
+/* hamburger menu */
+/* ========================== */
+.openbtn1{
+    z-index: 3;
+    display: none;
+    position: absolute;/*ボタン内側の基点となるためrelativeを指定*/
+    /* background:#57a2c7; */
+    cursor: pointer;
+      width: 50px;
+      height:50px;
+    border-radius: 5px;
+}
+.openbtn1 span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+  background: #fff;
+    width: 45%;
+}
+.openbtn1 span:nth-of-type(1) {
+  top:15px; 
+}
+.openbtn1 span:nth-of-type(2) {
+  top:23px;
+}
+.openbtn1 span:nth-of-type(3) {
+  top:31px;
+}
+.openbtn1.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+.openbtn1.active span:nth-of-type(2) {
+  opacity: 0;/*真ん中の線は透過*/
+}
+.openbtn1.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+/* ======================== */
+
+.blog-nav{
+    cursor: default;
+    font-size: 20px;
+    position: relative;
+    display: inline-block;
+    bottom: 30px;
+    width: 100vw;
+    text-align: center;
+}
+
+.blog-nav a + a{
+    margin-left: 32px;
+}
+.blog-nav a{
+    transition: 250ms;
+    color: #4A4E69;
+    text-decoration: none;
+}
+.blog-nav a:hover{
+    text-shadow: 1px 1px 3px var(--shadow);
+}
+
+
+p.title{
+    font-weight: bold;
+    background-color: unset;
+    font-size: 3rem;
+    color: #726565;
+}
+#article-nav{
+    background-color: rgba(230, 230, 230, 0.8);
+    box-shadow: 0px 0px 8px var(--shadow);
+    border: 3px solid #a3cef1;
+    border-radius: 15px;
+    padding: 25px;
+}
+#article-nav h2{
+    display: inline;
+    border-color: #274c77;
+}
+
+
+
+
+
+
+
+/* elements */
+
+
+/* heading */
+main h1{
+    padding: 10px;
+    background-color: #463f3a;
+    color: white;
+    border-radius: 8px;
+}
+main h2{
+    padding: 5px;
+    padding-left: 8px;
+    border-left: 8px solid #8a817c;
+}
+main hr{
+    border: unset;
+    border-bottom: 3px solid rgba(128, 128, 128, 0.70);
+}
+main strong{
+    background:linear-gradient(transparent 60%, #ffd100 60%);
+    font-weight: bold;
+}
+main .note{
+    border: 2px solid #274c77;
+    border-radius: 15px;
+    padding: 15px;
+}
+main blockquote{
+    border-left: 5px solid rgb(185, 185, 185);
+    padding-left: 15px;
+    border-radius: 5px;
+}
+main table{
+    border: 1px solid #7f7f7f;
+}
+main table th{
+    background-color: #cccccc;
+}
+main table td{
+    background-color: #f2f2f2;
+}
+main table tr + tr{
+    border: 1px solid #7f7f7f;
+}
+main table *{
+    padding: 5px;
+}
+main table tr *:not(main table tr:last-child){
+    border: 1px solid #7f7f7f;
+}
+main code{
+    color: black;
+    font-family: Inconsolata;
+    background-color: rgb(202, 202, 202);
+    border-radius: 5px;
+    padding: 0.4em;
+    font-size: 0.85em;
+}
+main a{
+    transition: 250ms;
+}
+main a:hover{
+    opacity: 0.8;
+}
+main a.download{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    background-color: #004e98;
+    border-radius: 10px;
+    font-size: 30px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    border: 3px solid white;
+    color: white;
+    text-decoration: none;
+}
+main a.download img{
+    height: 1.5em;
+    fill: white;
+    vertical-align: -0.35em;
+}
+main a.download:hover{
+    border-color: #ffd100;
+}
+
+
+
+
+
+/* ==Mobile== */
+@media screen and (max-width: 720px) {
+    header{
+        height: 100px;
+    }
+
+    p.title{
+        font-size: 2.25rem;
+    }
+    main h1{
+        font-size: 1.75rem;
+    }
+    main h2{
+        font-size: 1.5rem;
+    }
+    main{
+        left: 0px;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        width: 96vw;
+        margin-top: 105px;
+        scroll-margin: 105px;
+        height: calc(100vw - 105px);
+    }
+    .openbtn1{
+        display: block;
+    }
+    .blog-nav{
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        z-index: 1;
+        top: -17px;
+        padding-top: 17px;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.4);
+        line-height: 2.5rem;
+        bottom: 0px;
+        display: none;
+    }
+    .blog-nav a + a{
+        margin-left: 0px;
+    }
+    .blog-nav.active a{
+        display: block;
+    }
+    .blog-nav.active{
+        display: block;
+        text-align: center;
+        animation: show-menu 300ms linear forwards;
+    }
+
+    @keyframes show-menu {
+        0%{
+            left: -100vw;
+        }
+        100%{
+            left: 0px;
+        }
+    }
+}
