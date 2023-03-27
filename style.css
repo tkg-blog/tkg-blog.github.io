@@ -2,11 +2,11 @@
 
 @font-face {
     font-family: Inconsolata;
-    src: url(./Inconsolata.ttf);
+    src: url(https://tkg-blog.github.io/Inconsolata.ttf);
 }
 @font-face {
     font-family: NotoaSansJP;
-    src: url(./NotoSansJP.otf);
+    src: url(https://tkg-blog.github.io/NotoSansJP.otf);
 }
 
 
@@ -246,6 +246,10 @@ main code{
     border-radius: 5px;
     padding: 0.4em;
     font-size: 0.85em;
+}
+.hljs{
+    border-radius: 5px;
+    font-family: Inconsolata;
 }
 main a{
     transition: 250ms;
