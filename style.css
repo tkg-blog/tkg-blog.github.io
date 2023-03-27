@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 
 
 
@@ -50,6 +50,7 @@ header h1{
 
 
 main{
+    padding-bottom: 15rem;
     margin-top: 130px;
     font-size: 18px;
     width: 50vw;
@@ -63,6 +64,7 @@ main{
 
 
 footer{
+    font-size: 18px;
     background-color: #343a40;
     min-height: 100px;
     width: 100%;
@@ -236,7 +238,7 @@ main table tr *:not(main table tr:last-child){
 }
 main code{
     color: black;
-font-family: 'Inconsolata', monospace;
+    font-family: 'Inconsolata', monospace;
     background-color: rgb(202, 202, 202);
     border-radius: 5px;
     padding: 0.4em;
@@ -244,7 +246,8 @@ font-family: 'Inconsolata', monospace;
 }
 .hljs{
     border-radius: 5px;
-    font-family: 'Inconsolata', monospace;
+    font-size: 16px;
+    font-family: 'Inconsolata', monospace !important;
 }
 main a{
     transition: 250ms;
@@ -274,7 +277,7 @@ main a.download img{
     vertical-align: -0.35em;
 }
 main a.download:hover{
-    border-color: #ffd100;
+    border-color: #00a5c2;
 }
 
 
@@ -297,6 +300,7 @@ main a.download:hover{
         font-size: 1.5rem;
     }
     main{
+        padding-top: 130px;
         left: 0px;
         padding-left: 2vw;
         padding-right: 2vw;
@@ -304,6 +308,9 @@ main a.download:hover{
         margin-top: 105px;
         scroll-margin: 105px;
         height: calc(100vw - 105px);
+        top: 30px;
+        position: relative;
+        display: inline;
     }
     .openbtn1{
         display: block;
