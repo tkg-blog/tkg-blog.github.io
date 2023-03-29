@@ -18,5 +18,5 @@ function setArticleNav(){
     articleNav.innerHTML+="</ul>";
 }
 for(let dlBtn of document.getElementsByClassName("download")){
-    dlBtn.innerHTML='<img src="./download.svg">ダウンロード';
+    dlBtn.innerHTML='<img src="https://tkg-blog.github.io/download.svg">ダウンロード';
 }
