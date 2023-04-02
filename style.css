@@ -220,7 +220,7 @@ main blockquote{
     border-radius: 5px;
 }
 main img{
-    width: 40vw;
+    max-hight: 200px;
     text-align: center;
 }
 main table{
@@ -303,9 +303,6 @@ main a.download:hover{
     }
     main h2{
         font-size: 1.5rem;
-    }
-    main img{
-        width: 96vw;
     }
     main{
         padding-top: 130px;
