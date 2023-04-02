@@ -221,6 +221,7 @@ main blockquote{
 }
 main img{
     max-hight: 100px;
+    max-width: 40vw;
 }
 main table{
     border: 1px solid #7f7f7f;
@@ -302,6 +303,9 @@ main a.download:hover{
     }
     main h2{
         font-size: 1.5rem;
+    }
+    main img{
+        max-width: 96vw;
     }
     main{
         padding-top: 130px;
