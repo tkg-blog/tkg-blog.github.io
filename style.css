@@ -220,8 +220,7 @@ main blockquote{
     border-radius: 5px;
 }
 main img{
-    max-hight: 200px;
-    text-align: center;
+    max-hight: 100px;
 }
 main table{
     border: 1px solid #7f7f7f;
